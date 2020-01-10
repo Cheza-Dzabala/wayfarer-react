@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background: #ffffff;
+    height: auto;
+}
+
+
+/* Global Styles */
+.card{
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-acc {
+    display: block
+}
+input{
+    margin: 1rem;
+    height: 1.5rem;
+    padding: 0.3rem;
+    border: 1px solid #308E99;
+}
+
+.error-message{
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #b03f37;
+    border: 1px solid #a31308;
+    border-radius: .2rem;
+    color: #ffffff;
+}
+
+.error-message .message{
+    flex: 1;
+}
+
+.error-message .cancel-message {
+    flex: .1;
+    font-size: 10px;
+    justify-content: flex-end;
+}
+
+.error-message .cancel-message a:hover{
+    cursor: pointer;
+}
+
+input:focus{
+    border: #308E99 1px solid;
+    outline: none;
+}
+
+.btn{
+    border-radius: .3rem;
+    text-align: center;
+    background-color: #308E99;
+    color: #ffffff;
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin: .9rem;
+    padding: 1rem 1rem; 
+    text-decoration: none;
+}
+
+.btn-cancel{
+    background-color: #AE0000;
+}
+
+.modal-buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+/*
+    Home Page
+*/
+
+
+.showcase{
+    display: flex;
+    flex-direction: column;
+    background: url('./../assets/images/antoine-boissonot-UisgUZ-jrc4-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30vh;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container .logo a{
+    text-decoration: #ffffff;
+    color: #ffffff;
+    font-size: 1rem;
+    letter-spacing: .45rem;
+    text-transform: uppercase;
+}
+
+.nav-container .logo {
+    margin: 0 2rem;
+}
+.nav-background{
+    background-color: #308E99;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.navigation a{
+    display: block;
+    color: white;
+    letter-spacing: .2rem;
+    font-size: .8rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+
+
+
+h1{
+    margin: 2rem 2rem;
+    border-bottom: #308E99 1px solid;
+}
+
+/*Cards*/
+.search-card{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-card select{
+    background-color: #ffffff;
+    border: 1px solid #308E99;
+    text-transform: uppercase;
+    border-radius: 0px;
+    height: 1.5rem;
+    margin: 1rem 0rem;
+    width: 100%;
+}
+
+.search-card input{
+    margin: 1rem 0rem;
+    height: 1.5rem;
+    padding: 0rem;
+    border: 1px solid #308E99;
+    width: 100%;
+}
+
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.auth-form{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+
+
+
+/*
+    Trips Section
+*/
+
+
+.trips{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rem;
+    padding: 2rem;
+}
+.trip{
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+.trip a{
+    text-decoration: none;
+    color: black;
+}
+.trip img{
+    width: 100%;
+    height: 10rem;
+    border-radius: 1rem 1rem 0 0;
+    margin: 0;
+}
+
+.details{
+    padding: 0 2rem;
+}
+.section-title{
+    text-transform: uppercase;
+    border-bottom: 1px solid #308E99;
+    padding: 0 1rem
+}
+
+
+#user-bookings{
+    display: flex;
+    flex-direction: column;
+}
+
+#booking{
+    padding: 1rem;
+    margin: 1rem 1rem;
+}
+
+#booking #fare{
+    color: #ff0000;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem
+}
+
+.content a{
+    margin: 0 2rem;
+    text-decoration: none;
+    color: #308E99;
+}
+/*
+Auth Pages
+*/
+
+.auth-form{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+
+}
+
+.form-links{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+
+}
+
+.form-link{
+    color: #308E99;
+    text-decoration: none;
+    font-size: .5rem;
+}
+
+.auth-card h1{
+    font-size: .9rem;
+    text-transform: lowercase;
+    margin: 2rem 2rem;
+}
+
+#auth-background{
+display: flex;
+background: url('./../assets/images/juan-encalada-6mcVaoGNz1w-unsplash.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+height: 100vh ; 
+flex-direction: column;
+padding: 2rem;
+}
+
+#welcome-message{
+display: flex;
+flex-direction: column;
+text-align: center;
+margin-bottom: 2rem;
+color: #ffffff;
+}
+
+#welcome-message h1{
+margin: 0;
+padding: 0;
+text-transform: uppercase;
+letter-spacing: .3rem;
+}
+
+#welcome-message p{
+margin: 0;
+text-transform: lowercase;
+letter-spacing: .1rem;
+}
+
+/*Single Trip Details*/
+.single-trip-details{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.bus-and-seat-details{
+    display: flex;
+    flex-direction: column;
+}
+.trip-details-card{
+    display: flex;
+    flex-direction: row;
+    margin: .5rem 1rem;
+    padding: 1rem;
+}
+
+.trip-details-card h1{
+    align-self: center;
+    border-bottom: 1px #308E99 solid;
+    margin-bottom: 1rem;
+}
+.trip-details-card small{
+    align-self: center;
+    border-bottom: 1px #308E99 solid;
+    margin-bottom: 1rem;
+}
+.book-trip-card{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+}
+#booking-form{
+    display: flex;
+    flex-direction: column;
+}
+/*
+Admin Pages
+*/
+
+
+.admin-card{
+    display: flex;
+    justify-items: center;
+    text-decoration: none;
+    color: #000000;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem 1rem 1rem 1rem;
+
+}
+
+.admin-card img{
+    width: 10%;
+    height: 20%;
+    margin: 0;
+}
+
+.admin-card h1{
+    font-size: .8rem;
+}
+
+.all-trips{
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-trip-details{
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.select-user{
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    border: #308E99;
+}
+
+.select-user select{
+    height: 2rem;
+    font-size: 1rem;
+    border: #308E99 1px solid;
+    background-color: #ffffff;
+}
+
+
+/*
+    Media Queries
+*/
+
+
+    @media(min-width: 768px){
+        /*
+            Navigation
+        */
+
+        .select-user select{
+            margin: 0 16rem;
+        }
+
+        .btn-acc {
+            display: inline-block
+        }
+        .nav-container{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .navigation{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .navigation a { 
+            text-align: center; 
+            padding: 10px;
+            margin: 0.4rem;
+          }
+        .navigation a:hover{ 
+            text-align: center;
+            border-bottom: 1.5px solid rgba(255, 255, 255, 0.8)
+        }
+
+          .logo{
+              align-self: left;
+              margin: 0 .4rem;
+          }
+         /*
+        Cards
+        */
+
+        .search-card{
+            display: flex;
+            justify-content: center;
+            max-width: 40vw;
+            margin-left: 100px;
+        }
+
+        .search-card h1{
+            margin-bottom: 0px;
+        }
+
+        .search-card form{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .search-card select{
+            margin: .5rem 1rem;
+            height: 2rem;
+            width: 100%;
+            background-color: #ffffff;
+            border: 1px solid #308E99;
+            text-transform: uppercase;
+            height: 2.5rem;
+        }
+
+     
+        .form-inputs{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        .search-card input{
+            margin: .5rem 0rem;
+            height: 2.4rem;
+            padding: 0rem;
+            border-radius: 5px;
+            border: 1px solid #308E99;
+            width: 100%;
+        }
+        .search-card button{
+            width: 100%;
+        }
+
+        .search-card form button{
+            border-radius: 5px;
+            margin: 0rem 5rem;
+        }
+        .section-content{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: space-between;
+        }
+        .trips{
+            margin-top: 3rem;
+        }
+
+        .trip-section{
+            padding-left: 5rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .section-title{
+            width: 85vw;
+            align-self: center;
+        }
+        .trip{
+            width: 15rem;
+            margin: 1rem;
+        }
+
+        #booking{
+            flex: .2;
+            margin: 1rem;
+        }
+
+        #user-bookings{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        /*
+        Auth Pages
+    */
+    #auth-background{
+        flex-direction: row;
+    }
+    #welcome-message{
+        width: 50vw;
+        height: 100vh;
+        justify-content: center;
+    }
+
+    #welcome-message h1{
+        font-size: 2rem;
+        letter-spacing: .3rem;   
+    }
+
+    .auth-card{
+        align-self: center;
+        justify-self: center;
+        width: 50vh;
+    }
+
+    .form-link{
+
+        font-size: 1rem;
+    }
+
+        #booking{
+            width: 18rem;
+            margin: 1rem;
+        }
+
+        #user-bookings{
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+        .single-trip-details{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #bus-and-seat-details{
+           flex: 1;
+        }
+
+        .book-trip-card{
+           flex: 1;
+        }
+
+        .trip-details-card{
+            flex: .5;
+            justify-content: space-around;
+        }
+
+        .trip-details-card div{
+            margin: 2rem;
+        }
+
+        /*
+        Admin Section
+        */
+        .admin-section{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .admin-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0rem 10rem;
+        }
+    
+        .admin-card h1{
+            font-size: 1rem;
+        }
+
+        .admin-card{
+           width: 20rem;
+        }
+
+        .all-trips{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .admin-trip-details{
+            flex: .20;
+        }
+
+    }
+
+    @media(min-width: 1024){
+        .search-card{
+            width: 40vw;
+        }
+    }
+
