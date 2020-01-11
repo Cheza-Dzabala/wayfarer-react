@@ -7,8 +7,7 @@
     "test": "jest --config ./jest.config.json",
     "test:watch": "npm run test -- --watch",
     "test:coverage": "jest --coverage --colors",
-    "dev": "webpack-dev-server --mode development --open --hot",
-    "start": "serve -s ./dist",
+    "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
   },
   "repository": {
