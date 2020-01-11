@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, withRouter, Switch } from 'react-router-dom';
 import Signin from './views/Signin';
+import Signup from './views/Signup';
 import Notfound from './views/NotFound';
 
 class App extends Component {
@@ -14,6 +15,9 @@ class App extends Component {
       <Switch>
         <Route path="/login" >
           <Signin />
+        </Route>
+        <Route path="/signup">
+          <Signup />
         </Route>
         <Route path="*">
           <Notfound />
