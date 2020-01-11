@@ -2,12 +2,12 @@
   "name": "way-farer",
   "version": "1.0.0",
   "description": "A bus ticketing system",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "jest --config ./jest.config.json",
+    "test": "jest --config ./jest.config.json --coverage",
     "test:watch": "npm run test -- --watch",
-    "test:coverage": "jest --coverage --colors",
-    "start": "webpack-dev-server --mode development --open --hot",
+    "dev": "webpack-dev-server --mode development --open --hot",
+    "start": "serve -s ./dist",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -52,6 +52,7 @@
     "@babel/preset-es2015": "^7.0.0-beta.53",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "serve": "^11.3.0"
   }
 }
