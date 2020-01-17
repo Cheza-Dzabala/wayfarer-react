@@ -1,2 +1,0 @@
-export const LOGIN_ACTION = 'LOGIN_ACTION';
-export const LOGIN_ACTION_ERROR = 'LOGIN_ACTION_ERROR';

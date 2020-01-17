@@ -7,14 +7,7 @@ body{
     height: auto;
 }
 
-.my-container {
-  width: 100%;
-  height: 100%;
-}
 
-.centered-row {
-  justify-content: center;
-}
 /* Global Styles */
 .card{
     background-color: #ffffff;
@@ -29,7 +22,7 @@ body{
 }
 input{
     margin: 1rem;
-    height: 2.5rem;
+    height: 1.5rem;
     padding: 0.3rem;
     border: 1px solid #308E99;
 }
