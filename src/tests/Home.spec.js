@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Home from '../views/Home';
 import store from '../store';
-import findTestByAttribute from '../utilities/tests/findByTestAttribute';
 import findByTestAttribute from '../utilities/tests/findByTestAttribute';
 
 const setUp = () => {
@@ -10,7 +9,7 @@ const setUp = () => {
 }
 
 describe('Name of the group', () => {
-  it('(should render)', () => {
+  it('Should test navbar', () => {
     const component = setUp();
     const nav = findByTestAttribute(component, 'nav');
     const navBar = nav.dive();
