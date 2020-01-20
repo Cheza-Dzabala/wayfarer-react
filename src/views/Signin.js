@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import { loginAction } from './../actions/authActions';
 import { connect } from 'react-redux';
-import { UncontrolledAlert, Spinner, Row } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import Alert from '../components/AlertComponent';
+import { Spinner, Row } from 'reactstrap';
 
 class Signin extends Component {
 
   state = {
     email: '',
     password: '',
-    isLoading: false
+    isLoading: false,
+
   }
 
   toggleLoad = async () => {
@@ -43,9 +45,10 @@ class Signin extends Component {
     await this.toggleLoad();
   }
 
-  render() {
-    const { email, password, isLoading } = this.state;
-    console.log(this.state);
+
+  LoginComp = () => {
+    const { email, password, isLoading, visible } = this.state;
+
     const { status } = this.props;
     return (
       <div className="my-container fluid">
@@ -64,9 +67,8 @@ class Signin extends Component {
             <form onSubmit={this.login} className="auth-form" id="login-form">
               {
                 (status === 'error') ? <div id="authMessageContainer">
-                  <UncontrolledAlert color="danger">
-                    I am an alert and I can be dismissed!
-                 </UncontrolledAlert>
+                  <Alert message="Sign in failed" variant="danger" />
+
                 </div> : ''
               }
               <input type="email" value={email} name="email" id="email" placeholder="Email..." onChange={(e) => this.handleChange(e)} data-test="email" />
@@ -80,6 +82,11 @@ class Signin extends Component {
         </div>
       </div>
     )
+  }
+
+  render() {
+    const { status } = this.props;
+    return (status === 'success') ? <Redirect to="/" /> : <this.LoginComp />
   }
 }
 
