@@ -11,6 +11,7 @@ class Signin extends Component {
     email: '',
     password: '',
     isLoading: false,
+
   }
 
   toggleLoad = async () => {
@@ -47,6 +48,7 @@ class Signin extends Component {
 
   LoginComp = () => {
     const { email, password, isLoading, visible } = this.state;
+
     const { status } = this.props;
     return (
       <div className="my-container fluid">
@@ -66,6 +68,7 @@ class Signin extends Component {
               {
                 (status === 'error') ? <div id="authMessageContainer">
                   <Alert message="Sign in failed" variant="danger" />
+
                 </div> : ''
               }
               <input type="email" value={email} name="email" id="email" placeholder="Email..." onChange={(e) => this.handleChange(e)} data-test="email" />
