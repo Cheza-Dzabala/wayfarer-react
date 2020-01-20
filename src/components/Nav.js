@@ -11,7 +11,7 @@ const logout = () => {
 
 export default function Nav() {
   return (
-    <nav className="navigation" id="nav">
+    <nav className="navigation" id="nav" data-test="navigation">
       <a href="">home</a>
       <a id="linkLogout" onClick={() => logout()}>logout</a>
       <a href="#">help</a>

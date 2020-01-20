@@ -38,9 +38,6 @@ class Signup extends Component {
       email,
       password
     }
-
-    //  await loginAction(credentials);
-    //  await this.toggleLoad();
   }
 
   render() {

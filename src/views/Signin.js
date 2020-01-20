@@ -51,7 +51,7 @@ class Signin extends Component {
 
     const { status } = this.props;
     return (
-      <div className="my-container fluid">
+      <div className="my-container fluid" >
         <div id="auth-background">
           <div id="welcome-message">
             <h1>Way Farer</h1>
@@ -64,15 +64,15 @@ class Signin extends Component {
                 <Spinner type="grow" color="primary" />
               </Row> : ''
             }
-            <form onSubmit={this.login} className="auth-form" id="login-form">
+            <form onSubmit={this.login} className="auth-form" id="login-form" data-test="loginForm">
               {
                 (status === 'error') ? <div id="authMessageContainer">
                   <Alert message="Sign in failed" variant="danger" />
 
                 </div> : ''
               }
-              <input type="email" value={email} name="email" id="email" placeholder="Email..." onChange={(e) => this.handleChange(e)} data-test="email" />
-              <input type="password" value={password} name="password" id="password" placeholder="Password..." onChange={(e) => this.handleChange(e)} data-test="password" />
+              <input type="email" value={email} name="email" id="email" placeholder="Email..." onChange={(e) => this.handleChange(e)} data-test="email" data-test="email" />
+              <input type="password" value={password} name="password" id="password" placeholder="Password..." onChange={(e) => this.handleChange(e)} data-test="password" data-test="password" />
               <button type="submit" href="#" className="btn">Login</button>
             </form>
             <div className="form-links">

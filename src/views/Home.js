@@ -10,7 +10,7 @@ export default class Home extends Component {
           <section className="showcase">
             <div className="nav-container">
               <div className="logo"><a href="#">Way Farer <span id="welcome"></span></a></div>
-              <Nav />
+              <Nav data-test="nav" />
             </div>
             <aside className="card search-card">
               <h1>Filter through trips</h1>
